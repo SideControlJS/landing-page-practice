@@ -40,6 +40,13 @@ body {
     font-weight: bold;
     font-size: 16px;
   }
+
+  nav ul li a:hover {
+    color: #9b9b9b;
+    font-weight: bold;
+    font-size: 15.8px;
+    delay: 1s;
+  }
   
   /* Hero Section */
 
@@ -47,7 +54,7 @@ body {
     height: 100vh;
     background-image: url('/assets/Images/GJJ_HQ_JL.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: 82px top;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,23 +90,8 @@ body {
     margin-bottom: 40px;
   }
   
-  .cta-button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #ffffff;
-    color: #006400;
-    font-size: 20px;
-    border-radius: 4px;
-  }
 
-
-
-
-
-
-
-
-  
+ 
   .hero-content {
     text-align: center;
     color: #c5c5c5;
@@ -118,10 +110,17 @@ body {
   .cta-button {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #006400;
+    background-color: #034703;
     color: #ffffff;
     font-size: 20px;
     border-radius: 4px;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1); /*adds shaddow?*/
+  }
+
+  .cta-button:hover {
+    transform: translateY(-1.25px);
+    box-shadow: 0 4px 0 rgba(32, 32, 32, 0.1);
+    background-color: #054d05;
   }
   
   /* About, Facility, and Contact Sections */
