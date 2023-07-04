@@ -1,150 +1,174 @@
 /* styles.css */
 
-/* General Styling */
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    color: #000000;
-  }
-  
-  h1, h2 {
-    margin: 0;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #006400;
-  }
-  
-  /* Header and Navigation */
-  header {
-    background-color: #0e0e0e;
-    padding: 20px;
-    
-  }
+  font-family: Arial, sans-serif;
+}
 
-  header img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-  
-  nav ul li a {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 16px;
-  }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  nav ul li a:hover {
-    color: #9b9b9b;
-    font-weight: bold;
-  }
-  
-  /* Hero Section */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
 
-  .hero {
-    height: 100vh;
-    background-image: url('/assets/Images/GJJ_HQ_JL.jpg');
-    background-size: cover;
-    background-position: 82px top;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #070707;
-    opacity: .7;
-    mix-blend-mode: multiply;
-  }
-  
-  .hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-  
-  .hero-content p {
-    font-size: 24px;
-    margin-bottom: 40px;
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: #ffffff;
-  }
-  
-  .hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px #202020;
-  }
-  
-  .hero-content p {
-    font-size: 24px;
-    margin-bottom: 40px;
-  }
-  
-  .cta-button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #034703;
-    color: #ffffff;
-    font-size: 20px;
-    border-radius: 4px;
-    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1); /*adds shaddow?*/
-  }
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .cta-button:hover {
-    transform: translateY(-1.25px);
-    box-shadow: 0 4px 0 rgba(32, 32, 32, 0.1);
-    background-color: #054d05;
-  }
-  
-  /* About, Facility, and Contact Sections */
-  section {
-    padding: 80px 0;
-    text-align: center;
-  }
-  
-  section h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    color: #006400;
-  }
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
 
-  section p {
-    margin-left: 100px;
-    margin-right: 100px;
-    justify-content: center;
-  }
+nav ul li a:hover {
+  color: #ff9900;
+}
+
+.main {
+  padding: 40px;
+}
+
+/* Hero section */
+.hero-section {
+  background-image: url('/assets/Images/GJJ_HQ_JL.jpg');
+  background-size: cover;
+  background-position: cover;
+  height: 605px;
+  width: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   
-  /* Footer */
-  footer {
-    background-color: #303030;
-    color: #ffffff;
-    padding: 20px;
+}
+
+.hero-content {
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #ff9900;
+}
+
+/* About section */
+.about-section {
+  padding: 40px;
+}
+
+.about-content {
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Classes section */
+.classes-section {
+  padding: 40px;
+}
+
+.classes-content {
+  text-align: center;
+}
+
+.classes-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.classes-content ul {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Schedule section */
+.schedule-section {
+  padding: 40px;
+}
+
+.schedule-content {
+  text-align: center;
+}
+
+.schedule-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.schedule-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-content table th,
+.schedule-content table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.schedule-content table th {
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+}
+
+.schedule-content table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+@media screen and (min-width: 766px) {
+  .about-section {
+    width: 75%;
+    margin: 0 auto;
   }
+}
+  
+  
+     
   
